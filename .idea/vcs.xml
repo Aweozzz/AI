@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ros/Jetson-nano-ros" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ros/Mixly_WIN" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ros/Mixly_WIN/arduino/portable/packages/stm32duino" vcs="Git" />
+  </component>
+</project>
