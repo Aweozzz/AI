@@ -1,7 +1,7 @@
 import os
 
 def generate(img_path):
-    f = open("GoogleNet/label.txt", 'a')
+    f = open("label.txt", 'a')
     label_list = os.listdir(img_path)
     print(label_list)
     count = -1
@@ -17,4 +17,4 @@ def generate(img_path):
     f.close()
 
 if __name__ == '__main__':
-    generate("J:\destop\毕设\data\data/test")
+    generate("../../../data/mydata/test")

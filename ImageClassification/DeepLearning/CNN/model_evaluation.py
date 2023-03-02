@@ -154,15 +154,15 @@ def evaluate(txt_path, model):
 if __name__ == "__main__":
     # create model
     # model = googlenet(num_classes = 2)
-    # model = resnet34(num_classes = 2)
-    model = CNN()
+    model = resnet34(num_classes = 2)
+    # model = CNN()
 
     # load model weights
     # weights_path = "GoogleNet/googleNet.pth"
     # weights_path = "ResNet/resnet34.pth"
-    weights_path = "articleCNN/cnn.pth"
+    weights_path = "cnn.pth"
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     missing_keys, unexpected_keys = model.load_state_dict(torch.load(weights_path,  map_location=device),
                                                           strict=False)
     model.to(device)
-    evaluate('GoogleNet/label.txt', model)
+    evaluate('label.txt', model)

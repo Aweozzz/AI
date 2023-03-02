@@ -67,7 +67,7 @@ def validate(model, device, val_loader, criterion):
     return val_loss / val_step, val_acc
 
 
-def main(batch_size=32, lr=1e-5, epochs=200, num_workers=0, save_path='./cnn.pth'):
+def main(batch_size=32, lr=1e-5, epochs=5, num_workers=0, save_path='./resnet-34.pth'):
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     print("using {} device.".format(device))
 
@@ -77,7 +77,7 @@ def main(batch_size=32, lr=1e-5, epochs=200, num_workers=0, save_path='./cnn.pth
         transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])
     ])
 
-    data_dir = "J:/destop/毕设/data/data"
+    data_dir = "../../../data/mydata"
     assert os.path.exists(data_dir), "{} path does not exist.".format(data_dir)
 
     train_dataset = datasets.ImageFolder(os.path.join(data_dir, 'train'), data_transforms)
@@ -123,6 +123,7 @@ def main(batch_size=32, lr=1e-5, epochs=200, num_workers=0, save_path='./cnn.pth
     plt.legend()  # 显示图例
     plt.xlabel('epoches')
     plt.title('Model accuracy&loss')
+    plt.savefig("model.png")
     plt.show()
 
 
