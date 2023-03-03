@@ -28,7 +28,7 @@ def resize_img(image, size=224):
 
 # 裁剪
 def Custom_crop(image, x, y, size=224):
-    return crop(image, x-size/2, x-size/2, y+size/2, y+size/2)
+    return crop(image, y-size, x-size, size, size)
 
 def horizonflip(image):
     HF = transforms.RandomHorizontalFlip(p=1.0)
