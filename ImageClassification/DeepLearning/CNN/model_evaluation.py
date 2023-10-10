@@ -150,7 +150,7 @@ def evaluate(txt_path, model, model_name, path, device):
         img_path, label = line.split()
         res, res_p = Precdict(img_read(img_path, model_name), model, device)
         pre_res[i] = res.item()
-        pre_p[i] = res_p[1]
+        pre_p[i] = res_p[pre_res[i]
         ground_truth[i] = int(label)
         if pre_res[i] == -1:
             pre_res[i] = 0
